@@ -1,13 +1,278 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.NavAll{
+  background-color: #CCD1D5 !important;
+  width: 100% !important;
+  margin: 0px !important; 
+  /* padding: 0px !important; */
+}
+#collasible-nav-dropdown{
+  color: white !important;
+  margin: 0px 10px;
+}
+.NavTitle{
+  color: #ffffff !important;
+  /* color: #000000 !important */
+  font-size: 32px !important;
+  font-weight: bold;
+  font-style: italic;
+}
+.NavContainer{
+  min-width: 95% !important;
+  margin: 2px 23px !important; 
+}
+.auth-wrapper {
+  background-color: #CCD1D5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* 위도 가운데 위치 */
+  justify-content: center;
+}
+.landing-body{
+  background-color: #CCD1D5;
+  height: 1300px;
+}
+.auth-wrapper form {
+  /* max-width 말고 width로 변경해 사이즈 키워줌  */
+  width: 375px;
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth-wrapper h1 {
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
+}
+.auth-wrapper .form {
+  background: #0e101c;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-wrapper .p {
+  color: #bf1650;
+}
+
+.auth-wrapper p::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+.auth-wrapper input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.auth-wrapper label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  /* 폼과의 간격 줄이기
+    원래는 margin-bottom: 13px;
+          margin-top: 20px; 였음*/
+  margin: 5px 0 ;
+  /* color: white;  -> 글자색 */
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.auth-wrapper button[type="submit"],
+.auth-wrapper input[type="submit"] {
+  background: #ffffff;
+  color: black;
+  text-transform: uppercase;
+  border: 1px solid black;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+.message-form-button {
+  /* 버튼 색상 변경 */
+  background: #7A84EB;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+/* 버튼 위에 마우스 올렸을 때 색상 더 진하게 */
+.message-form-button:hover {
+  background: black;
+  color: white;
+}
+
+.auth-wrapper button[type="submit"]:hover,
+.auth-wrapper input[type="submit"]:hover {
+  background: black;
+  color: white;
+}
+
+.auth-wrapper button[type="submit"]:active,
+.auth-wrapper input[type="button"]:active,
+.auth-wrapper input[type="submit"]:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+.auth-wrapper input:disabled {
+  opacity: 0.4;
+}
+
+.auth-wrapper input[type="button"]:hover {
+  transition: 0.3s all;
+}
+
+.auth-wrapper button[type="submit"],
+.auth-wrapper input[type="button"],
+.auth-wrapper input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+.auth-wrapper button[type="button"] {
+  display: block;
+  appearance: none;
+  background: #333;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+.auth-wrapper button {
+  display: block;
+  appearance: none;
+  margin-top: 40px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+
+/* Landingpage */
+
+.product {
+  display: flex;
+  padding: 10px;
+}
+.thumbnail {
+  max-width: 200px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.product .price {
+  font-size: 16px;
+  font-weight: 600;
+}
+.product .title {
+  font-size: 17px;
+  font-weight: 600;
+}
+.product .date {
+  color: grey;
+  font-size: 13px;
+}
+/* 가로로 정렬 */
+.product_admin {
+  display: flex;
+  padding: 10px;
+}
+.product_admin .price {
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 7px;
+}
+.product_admin .title {
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 7px;
+}
+.product_admin .date {
+  color: grey;
+  font-size: 13px;
+  padding-top: 7px;
+}
+.product_admin .form-control {
+  width: 300px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.btn btn-outline-danger{
+  padding: 10px;
+}
+
+/* select form */
+.form-select {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  border-radius: 4px !important;
+  border: 1px solid black !important; 
+  padding: 10px 15px !important;
+  margin-bottom: 10px !important;
+  font-size: 14px !important;
+}
+
+
+/* 랜딩페이지 이미지 사이즈 */
+.card{
+  border-radius: 40px !important;
+  padding: 30px 30px; 
+}
+
+.img-box{
+  min-width: 350px !important;
+  /* min-height: 200px !important; */
+  /* 이미지 중앙정렬 */
+  line-height: 200px;
+  text-align: center;
+}
+
+.card-img-top{
+  position: center !important;
+  background-position: center;
+  max-width: 350px !important;
+  max-height: 200px !important; 
+}
+.vote_Button{
+  margin: 300px 700px;
+  padding: 100px 100px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* 랜딩페이지 카드 텍스트 스타일 */
+.card-title{
+  padding: 30px 10px;
+  text-align: center !important;
+}
+.card-text{
+  text-align: right !important;
 }
